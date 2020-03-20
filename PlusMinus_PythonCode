@@ -1,0 +1,28 @@
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the plusMinus function below.
+
+n = int(input())
+arr = list(map(int, input().rstrip().split()))
+p = 0.0
+m = 0.0
+z =0.0
+for i in arr:
+    if(i>0):
+        p =p+1
+    if(i<0):
+        m = m+1
+    if(i==0):
+        z = z+1
+fp = p/n
+fn = m/n
+fz = z/n
+rp  = (round(fp,6))
+rn  = (round(fn,6))
+rz  = (round(fz,6))
+print(rp,'\n',rn,'\n',rz)
