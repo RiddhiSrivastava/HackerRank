@@ -1,0 +1,40 @@
+#!/bin/python3
+
+import os
+import sys
+import re
+
+String = input()
+s = String.split(':')
+Hour = int(s[0])
+b= Hour 
+second  = s[2]
+sec3 = second[2]
+if Hour > 12:
+    b = Hour 
+if Hour < 12 and sec3 =="P":
+    b = Hour  +12
+if Hour<12 and sec3 == "A":
+    b = Hour
+if Hour == 12 and sec3 =="P":
+    b = 12
+if Hour == 12 and sec3 =="A":
+    b =0
+
+
+h = b
+x = "0"
+if h <10:
+    hour = x+str(b)
+if h>10:
+    hour = str(b)
+
+minute = ":"+s[1]+":"
+sec1 = second[0]
+sec2 = second[1]
+
+time = hour+minute+sec1+sec2
+print(time)
+
+
+
