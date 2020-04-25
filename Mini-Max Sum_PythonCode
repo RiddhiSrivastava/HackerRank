@@ -1,0 +1,40 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the miniMaxSum function below.
+
+Max = []
+Min = []
+arr = list(map(int, input().rstrip().split()))
+n =5
+
+m =arr[0]
+mi = arr[0]
+for j in range(1,5):
+    if arr[j]> m:
+        m = arr[j]
+    if arr[j] < m:
+        mi = arr[j]
+for i in arr:
+    if i!=m:
+        Min.append(int(i))
+    if i!= mi:
+        Max.append(int(i))
+minsum =0
+maxsum=0
+for k in Min:
+    minsum = minsum+k
+for l in Max:
+    maxsum =maxsum+l
+
+print(minsum, maxsum)
+
+
+
+
+
