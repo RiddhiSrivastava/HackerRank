@@ -1,3 +1,4 @@
+#!/bin/python3
 
 import math
 import os
@@ -5,22 +6,24 @@ import random
 import re
 import sys
 
-n = int(input())
 arr = list(map(int, input().rstrip().split()))
-p = 0.0
-m = 0.0
-z =0.0
-for i in arr:
-    if(i>0):
-        p =p+1
-    if(i<0):
-        m = m+1
-    if(i==0):
-        z = z+1
-fp = p/n
-fn = m/n
-fz = z/n
-rp  = (round(fp,6))
-rn  = (round(fn,6))
-rz  = (round(fz,6))
-print(rp,'\n',rn,'\n',rz)
+
+one = arr[0]+ arr[1] + arr[2] + arr[3]
+two = arr[1]+ arr[2] + arr[3] + arr[4]
+three = arr[2]+ arr[3] + arr[4] + arr[0]
+four = arr[3]+ arr[4] + arr[0] + arr[1]
+five = arr[4]+ arr[0] + arr[1] + arr[2]
+arr1 = [one,  two, three, four, five]
+ma = arr1[0]
+mi =arr1[0]
+for i  in  range(1,5):
+    if  arr1[i] >  ma:
+        ma = arr1[i]
+    if arr1[i]<mi:
+        mi = arr1[i]
+print (mi, ma)
+
+    
+
+
+
