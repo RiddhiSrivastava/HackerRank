@@ -1,0 +1,25 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+n= int(input().strip())
+for a0 in range(n):
+    a = int(input().strip())
+    if a>=35:
+        rem = a%5
+        if rem>=3:
+            final = a + (5-rem)
+        else:
+            final = a
+    if a < 35:
+        final = a
+
+
+
+    print(final)
+

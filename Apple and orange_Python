@@ -1,0 +1,47 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+st = input().split()
+
+s = int(st[0])
+
+t = int(st[1])
+
+ab = input().split()
+
+a = int(ab[0])
+
+b = int(ab[1])
+
+mn = input().split()
+
+m = int(mn[0])
+
+n = int(mn[1])
+
+apples = list(map(int, input().rstrip().split()))
+
+oranges = list(map(int, input().rstrip().split()))
+app =[]
+ora =[]
+for i in range(0,m):
+    count = apples[i]+ a
+    app.append(count)
+for j in range(0,n):
+    counts = oranges[j]+b
+    ora.append(counts)
+ap = 0
+o =0
+for k in range(0,m):
+    if app[k]>=s and app[k]<=t:
+        ap =ap+1
+for l in range(0,n):
+    if ora[l]>=s and ora[l]<=t:
+        o = o+1
+print(ap,o, sep ="\n")
+
