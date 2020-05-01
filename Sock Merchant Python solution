@@ -1,0 +1,31 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+n = int(input())
+
+ar = list(map(int, input().rstrip().split()))
+x= max(ar) +1
+count = [0]*x
+pair = 0
+#print(count)
+for i in range(0,n):
+    a  = ar[i]
+    count[a] = count[a]+1
+c=0
+for i in range(0,x):
+    if count[i]/2>=1:
+        pair = int(count[i]/2)
+        c = c+pair
+      
+print(c)
+
+
+
+
+
+ 

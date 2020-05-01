@@ -1,0 +1,32 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+nk = input().rstrip().split()
+
+item= int(nk[0])
+
+allergy = int(nk[1])
+
+bill = list(map(int, input().rstrip().split()))
+back = int(input())
+t = 0
+total = 0
+ret = 0
+
+for i in range(0,item):
+    if i!=allergy: 
+    
+        t = t + bill[i]
+total = t/2
+
+if back>total:
+    ret = int(back - total)
+    s = str(ret)
+if total == back:
+    s = "Bon Appetit"
+print(s)
