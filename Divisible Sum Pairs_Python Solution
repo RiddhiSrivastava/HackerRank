@@ -1,0 +1,28 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+nk = input().split()
+n = int(nk[0])
+k = int(nk[1])
+count= 0 
+co =0
+ar = list(map(int, input().rstrip().split()))
+s=0
+temp=0
+for  i in  range (0,n): 
+   
+    for j  in  range (temp,n):
+        if i!=j:
+
+            s  = ar[i] + ar[j]
+            
+            if  s %k ==0 :
+                count  =  count+1
+    temp = temp+1
+
+print(count)

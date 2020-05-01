@@ -1,0 +1,31 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+n = int(input())
+
+arr = list(map(int, input().rstrip().split()))
+mi =arr[0]
+ma =arr[0]
+maxcount =0
+mincount =0
+for i in range(0,n):
+    if arr[i]>ma:
+        ma = arr[i]
+        maxcount = maxcount+1
+    else:
+        for j in range(0,n):
+            if arr[j]<mi:
+                mi = arr[j]
+                mincount = mincount+1
+
+print(maxcount,mincount)
+        
+
+

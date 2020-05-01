@@ -1,0 +1,35 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+n = int(input().strip())
+
+arr = list(map(int, input().rstrip().split()))
+x = max(arr)+1
+count =[0]*x
+
+for i in range(0,n):
+    count[arr[i]]+=1
+y = max(count)
+c = count.index(y)
+for j in range(0,x):
+    if count[j] == y:
+        d = count[j]
+        h = count.index(d)
+        if h<c:
+            c = h
+print(c)
+
+
+
+    
+
+      
+
+
