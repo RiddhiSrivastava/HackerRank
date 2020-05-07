@@ -1,0 +1,35 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+n = int(input())
+s = input()
+m = n+1
+start =0
+arr=[]
+valley=0
+for i in range(0,n):
+    if s[i]=="U":
+        start =start+1
+        arr.append(start)
+    else:
+        start = start-1
+        arr.append(start)
+count = []
+count.append(0)
+for j in range(0,n):
+    if arr[j] == 0:
+        count.append(j)
+for k in range(0,len(count)-1):
+    b =   count[k]
+    c = count[k+1]
+    for l in range(b,c):
+        if arr[l]<0:
+            valley = valley+1
+            break
+print(valley)
+

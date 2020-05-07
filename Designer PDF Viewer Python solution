@@ -1,0 +1,26 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+h = list(map(int, input().rstrip().split()))
+
+word = input()
+
+s = list(word)
+length = len(s)
+count =[]
+for i in range(0, len(s)):
+    x = ord(s[i])-96
+    count.append(x)
+m = max(count)
+ma = 0
+for j in range(0,m):
+    if h[j]>ma:
+        ma = h[j]
+area = length*ma
+
+print(area)

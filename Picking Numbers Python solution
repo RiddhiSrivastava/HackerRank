@@ -1,0 +1,60 @@
+
+Azure Active Directory (for IAM)
+
+											Azure Data Factory
+
+Azure Data Bricks
+
+										Azure Key Vault
+
+
+										Azure Application Gateway
+
+											Azure vm
+
+
+										Azure Container Registry
+
+Azure Cosmos DB
+
+										Azure Database for MySQL
+
+											Azure Load Balancer
+
+											Azure Resource Group
+
+
+											Azure Resource Locks
+
+											Azure Virtual Network
+Azure Policy
+
+Azure Security Center
+
+
+
+											Azure SQL Database
+
+
+Azure Database for PostgreSQL
+
+Azure Monitor
+
+
+Azure Network Watcher
+
+												Storage Account
+
+Subnets
+
+Azure Kubernetes Service
+
+App service
+
+Azure VPN Gateway
+
+
+
+
+
+ event where cloud.type = 'azure' AND json.rule = ($.operationName.localizedValue = 'Delete Virtual Machine' AND $.status.localizedValue = 'Succeeded' ) OR ($.operationName.localizedValue = 'Delete Key Vault' AND $.eventName.value = 'EndRequest' ) OR ( $.operationName.localizedValue = 'Delete Virtual Network' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ( $.operationName.localizedValue = 'Delete resource group' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded' ) OR ($.operationName.localizedValue = 'Delete Storage Account' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded' ) OR ($.operationName.localizedValue = 'Delete Load Balancer' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ( $.operationName.localizedValue = 'Delete MySQL Server' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded' ) OR ($.operationName.localizedValue = 'Delete Container Registry' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ($.operationName.localizedValue = 'Delete Data Factory' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ($.operationName.localizedValue = 'Delete SQL database' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ($.operationName.localizedValue = 'Delete PostgreSQL Server' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ($.operationName.localizedValue = 'Delete Application Gateway' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ($.operationName.localizedValue = 'Delete management locks ' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ($.operationName.localizedValue = 'Delete Network Interface' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ($.operationName.localizedValue = 'Delete Network Security Group' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ($.operationName.localizedValue = 'Delete Event Hub' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ($.operationName.localizedValue = 'Delete Network Watcher' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ($.operationName.localizedValue = 'Remove Databricks Workspace' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ($.operationName.localizedValue = 'Delete Azure Firewall' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ($.operationName.localizedValue = 'Delete Virtual Network Peering' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ($.operationName.localizedValue = 'Delete Route Table' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ($.operationName.localizedValue = 'Delete Activity Log log profile' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ($.operationName.localizedValue = 'Delete activity log alert' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ($.operationName.localizedValue = 'Delete SQL server' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ($.operationName.localizedValue = 'Delete Azure SQL Managed instance ' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ($.operationName.localizedValue = 'Delete policy assignment ' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ($.operationName.localizedValue = 'Delete custom role definition ' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded') OR ($.operationName.localizedValue = 'Delete Virtual Network Subnet ' AND $.eventName.value = 'EndRequest' AND $.status.value = 'Succeeded')

@@ -1,0 +1,26 @@
+#!/bin/python3
+
+import os
+import sys
+
+bnm = input().split()
+b = int(bnm[0])
+n = int(bnm[1])
+m = int(bnm[2])
+s = 0
+k = list(map(int, input().rstrip().split()))
+d = list(map(int, input().rstrip().split()))
+count=[]
+count.append(0)
+for i in range(0,n):
+    for j in range(0,m):
+        s = k[i]+d[j]
+        if s<=b:
+            count.append(s)
+        
+amount = max(count)
+if amount==0:
+    amount = -1  
+
+print(amount)
+ 

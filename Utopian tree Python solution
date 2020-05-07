@@ -1,0 +1,33 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+t = int(input())
+tree=[]
+for t_itr in range(t):
+    n = int(input())
+    tree.append(n)
+m = max(tree)
+h=1
+height = []
+height.append(h)
+for i in range(0,m):
+  
+    if i%2==0:
+        h = h*2
+        height.append(h)
+    else:
+        h = h+1
+        height.append(h)
+for i in range (0,  len(tree)):
+    x = tree[i]
+    l = height[x]
+    print(l)
+
+

@@ -1,0 +1,24 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+nk = input().split()
+
+n = int(nk[0])
+
+k = int(nk[1])
+
+height = list(map(int, input().rstrip().split()))
+m = max(height)
+if m>k:
+    result = m-k
+else:
+    result = 0
+print(result)
+ 
